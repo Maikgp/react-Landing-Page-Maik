@@ -1,10 +1,10 @@
-#mainBox{
+#mySquare{
     display:flex;
     background-color: black;
     justify-content: center;
 }
 
-.box {
+.square {
     width: 60px;
     height: 80px;
     background-color:black; 
@@ -16,5 +16,18 @@
     border: solid 3px grey;
     font-size: 2rem;
     position: relative;
-
+    
+}
+.clock {
+    width: 60px;
+    height: 80px;
+    background-color:black; 
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding-top:10px;
+    border: solid 3px grey;
+    font-size: 2rem;
+    position: relative;
 }
