@@ -12,10 +12,12 @@
 */
 body{
     margin-top: 100px;
+    background-color: rgb(49, 49, 49);
 }
 ul{
     padding: 0;
     margin-bottom: 0;
+    background-color: rgb(174, 199, 221);
 }
 ul li{
     border: 1px solid grey;
@@ -23,14 +25,24 @@ ul li{
     border-right: 1px solid grey;
     list-style: none;
     padding: 5px; 
+    
 }
+
 h1{
-  text-align: center;  
+  text-align: center;
+  color: azure;
 }
 input{
     border: none;
     width: 100%;
+
+    
 }
 .todo_list_task:hover .todoList_delete {
     display: block;
+    
+}
+
+#task{
+    color:white
 }
