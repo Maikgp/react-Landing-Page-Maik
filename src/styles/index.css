@@ -13,20 +13,24 @@
 body{
     margin-top: 100px;
 }
-
-ul{ padding: 0;
+ul{
+    padding: 0;
     margin-bottom: 0;
-    
 }
-
 ul li{
-    border: 1px solid grey ;
+    border: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
     list-style: none;
-    padding: 5px;
+    padding: 5px; 
 }
-
 h1{
-    text-align: center;
+  text-align: center;  
 }
-input{ border: none
+input{
+    border: none;
+    width: 100%;
+}
+.todo_list_task:hover .todoList_delete {
+    display: block;
 }

@@ -2,42 +2,52 @@ import React, { useState } from "react";
 
 
 
-//create your first component
+
 const Home = () => {
+
+	const [inputValue, setInputValue] = useState("")
+	const [todo, setTodo] = useState([])
+
+
 	return (
+		<div className="text-center">
+			<h1>My todos</h1>
+			<div>
+				<ul className="list-group">
+					<li className="list-group-item">
+						<input
+							type="text"
+							onChange={(e) => setInputValue(e.target.value)}
+							value={inputValue}
+							onKeyPress={(e) => {
+								if (e.key === "Enter") {
+									setTodo(todo.concat([inputValue]));
+									setInputValue("");
+								}
+							}}
+							placeholder="What do you need to do?">
+						</input>
+					</li>
+					{todo.map((item, index) => (
+						<li className="list-group-item d-flex justify-content-between">
+							<span className="todo_list_task">
+								{item}
+							</span>
+							<span className="todoList_delete">
+								<i className="fa fa-trash"
+									onClick={() => setTodo(todo.filter((t, currentIndex) => index != currentIndex))}></i>
+							</span>
 
-		<div className="container">
+						</li>
+					))}
+				</ul>
+				<div>
+					{todo.length} task
+				</div>
+			</div>
 
-			<h1>My Todo</h1>
-			<ul>
-				<li><input type="text" placeholder="what do you need to do?" ></input></li>
-				<li>walk the dog</li>
-				<li>take breasf</li>
-				<li>take a food</li>
-			</ul>
-			<div>23 tasks</div>
 		</div>
-		       
 	);
-
-
 };
-
-
-
-/* const [inputValue, setInputValue] = useState("")
-const [todo,setTodo] = useState([])
-
-
-return (
-	<div className="text-center">
-		<h1> My To do</h1>
-		
-		
-	</div>
-) */
-
-
-
 
 export default Home;
