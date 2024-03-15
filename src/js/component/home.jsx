@@ -4,7 +4,7 @@ const Home = () => {
     const [inputValue, setInputValue] = useState("");
     const [todo, setTodo] = useState([]);
 
-	fetch('https://playground.4geeks.com/apis/fake/todos/user/alesanchezr', {
+	fetch('https://playground.4geeks.com/apis/fake/todos/Maikgp', {
       method: "PUT",
       body: JSON.stringify(todos),
       headers: {
